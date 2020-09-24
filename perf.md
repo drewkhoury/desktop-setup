@@ -36,3 +36,32 @@ done
 
 run the following each morning to create a new output file:
 `sh /Users/$USER/Desktop/perf/dirtest.sh > /dev/null 2>&1 &`
+
+
+
+# record top CPU offenders
+
+```
+#!/bin/bash
+
+filepath=/Users/drew/Desktop/perf/load   # modify as desired
+interval=20                         # reports per minute
+timelimit=86400                      # how long to run, in seconds
+
+mydate=`date "+%H:%M:%S"`           # the timestamp
+mydatetime=`date +%F_%H-%M-%S`
+freq=$((60/$interval))              # for sleep function
+
+while [ "$SECONDS" -le "$timelimit" ] ; do
+  echo '' >> $filepath/$mydatetime.txt
+  echo $mydatetime >> $filepath/$mydatetime.txt
+  top -l3 -n10 > load-test-data-tmp ; tail -n22 ./load-test-data-tmp  >> $filepath/$mydatetime.txt
+  sleep 10
+done
+
+
+run the following each morning to create a new output file:
+
+```
+sh /Users/drew/Desktop/perf/load-checker.sh > /dev/null 2>&1 &
+```
