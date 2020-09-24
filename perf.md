@@ -30,7 +30,7 @@ while [ "$SECONDS" -le "$timelimit" ] ; do
   echo '' >> $filepath/$mydatetime.txt
   echo $mydatetime >> $filepath/$mydatetime.txt
   { time sh /Users/drew/Desktop/perf/cd-script.sh ; } 2>> $filepath/$mydatetime.txt
-  sleep 60
+  sleep 10
 done
 ```
 
