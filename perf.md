@@ -68,3 +68,15 @@ run the following each morning to create a new output file:
 ```
 sh /Users/$USER/Desktop/perf/load-checker.sh > /dev/null 2>&1 &
 ```
+
+We can do analysis after the fact like so:
+
+```
+drew@drews-MacBook-Pro ~ % cat /Users/drew/Desktop/perf/load/2020-09-24_10-36-21.txt | grep Load
+Load Avg: 4.63, 4.45, 4.34
+Load Avg: 4.40, 4.40, 4.32
+Load Avg: 4.24, 4.36, 4.31
+Load Avg: 3.89, 4.28, 4.28
+```
+
+... and we can get more sophisticated by running this through a small transformation script to display the data in CSV format via a simple loop.
