@@ -52,6 +52,9 @@ mydate=`date "+%H:%M:%S"`           # the timestamp
 mydatetime=`date +%F_%H-%M-%S`
 freq=$((60/$interval))              # for sleep function
 
+# You need to repeat at least three times to have the correct CPU statistics, which is done by the option -l3.
+# I keep the 10 most important jobs, which I extract from the log file with tail.
+
 while [ "$SECONDS" -le "$timelimit" ] ; do
   echo '' >> $filepath/$mydatetime.txt
   echo $mydatetime >> $filepath/$mydatetime.txt
