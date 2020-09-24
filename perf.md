@@ -44,7 +44,7 @@ run the following each morning to create a new output file:
 ```
 #!/bin/bash
 
-filepath=/Users/drew/Desktop/perf/load   # modify as desired
+filepath=/Users/$USER/Desktop/perf/load   # modify as desired
 interval=20                         # reports per minute
 timelimit=86400                      # how long to run, in seconds
 
@@ -63,5 +63,5 @@ done
 run the following each morning to create a new output file:
 
 ```
-sh /Users/drew/Desktop/perf/load-checker.sh > /dev/null 2>&1 &
+sh /Users/$USER/Desktop/perf/load-checker.sh > /dev/null 2>&1 &
 ```
