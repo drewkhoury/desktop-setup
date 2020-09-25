@@ -1,14 +1,21 @@
+# TL/DR
+
+A collection of scripts to help collect diagnostic information.
+
+
+1. Copy the scripts somewhere on your computer, like `/Users/$USER/Desktop/perf/scripts` then ensure you have a logs folder, ie `/Users/$USER/Desktop/perf/logs`.
+
+2. Run the scripts in the background each morning to collect new data:
+
+```
+sh /Users/$USER/Desktop/perf/scripts/dirtest.sh > /dev/null 2>&1 &
+sh /Users/$USER/Desktop/perf/scripts/load-checker.sh > /dev/null 2>&1 &
+sh /Users/$USER/Desktop/perf/scripts/process-details.sh > /dev/null 2>&1 &
+```
+
 # Directory Checker
 
-1. save this script somewhere handy like: `/Users/$USER/Desktop/perf`
-
-2. create a folder to store results: `mkdir /Users/$USER/Desktop/perf/dirtest`
-
-3. run in background (timelimit=86400 means this runs for 24 hours):
-
-`sh /Users/$USER/Desktop/perf/dirtest.sh > /dev/null 2>&1 &`
-
-4. you can turn the result into a csv:
+You can turn the result into a csv for further analysis:
 
 ```
 LATEST_FILE=$(ls -Art /Users/$USER/Desktop/perf/dirtest/ | tail -n 1)
@@ -19,20 +26,16 @@ awk ' { print $1, $2, $4, $6 } ' OFS=, /Users/$USER/Desktop/perf/dirtest/$LATEST
 
 # Load Checker
 
-1. save this script somewhere handy like: `/Users/$USER/Desktop/perf`
-
-2. create a folder to store results: `mkdir /Users/$USER/Desktop/perf/load`
-
-3. run in background (timelimit=86400 means this runs for 24 hours):
-
-`sh /Users/$USER/Desktop/perf/load-checker.sh > /dev/null 2>&1 &`
-
-4. you can check things:
+You can check things using some simple grep'ing:
 
 ```
-MY_PATH=/Users/$USER/Desktop/perf/load
-LATEST_FILE=$(ls -Art /Users/$USER/Desktop/perf/load/ | tail -n 1)
-LATEST_FILE_DATA=${LATEST_FILE}-dataonly.txt
+# get the log files...
+
+MY_PATH=/Users/$USER/Desktop/perf/logs/load
+LATEST_FILE=$(ls -Art ${MY_PATH} | tail -n 1)
+
+MY_PATH_DATA=/Users/$USER/Desktop/perf/logs/load-data
+LATEST_FILE_DATA=$(ls -Art ${MY_PATH_DATA} | tail -n 1)
 ```
 
 ## Check Load Averages over time
