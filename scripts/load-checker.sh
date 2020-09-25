@@ -1,9 +1,11 @@
 #!/bin/bash
 
-filepath=/Users/$USER/Desktop/perf/load   # modify as desired
+filepath=/Users/$USER/Desktop/perf/logs/load   # modify as desired
+filepath2=/Users/$USER/Desktop/perf/logs/load-data   # modify as desired
 timelimit=86400                      # how long to run, in seconds
 mydatetime=`date +%F_%H-%M-%S`
 myfile=$filepath/$mydatetime.txt
+myfile2=$filepath2/$mydatetime.txt
 
 while [ "$SECONDS" -le "$timelimit" ] ; do
   echo '' >> $myfile
@@ -20,7 +22,7 @@ while [ "$SECONDS" -le "$timelimit" ] ; do
   top -l3 -n5 -stats pid,command,cpu,pstate,time > load-test-data-tmp-x ; tail -n15 ./load-test-data-tmp-x  >> $myfile
 
   # data only
-  tail -n15 ./load-test-data-tmp-x | tail -n +11 | sed "s/^/$mydatetime_loop /" >> $myfile-dataonly.txt
+  tail -n15 ./load-test-data-tmp-x | tail -n +11 | sed "s/^/$mydatetime_loop /" >> $myfile2
 
   sleep 10
 done
