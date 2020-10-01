@@ -2,7 +2,6 @@
 
 A collection of scripts to help collect diagnostic information.
 
-
 1. Copy the scripts somewhere on your computer, like `/Users/$USER/Desktop/perf/scripts` then ensure you have a logs folder, ie `/Users/$USER/Desktop/perf/logs`.
 
 2. Run the scripts in the background each morning to collect new data:
@@ -11,6 +10,12 @@ A collection of scripts to help collect diagnostic information.
 sh /Users/$USER/Desktop/perf/scripts/dirtest.sh > /dev/null 2>&1 &
 sh /Users/$USER/Desktop/perf/scripts/load-checker.sh > /dev/null 2>&1 &
 sh /Users/$USER/Desktop/perf/scripts/process-details.sh > /dev/null 2>&1 &
+```
+
+The looping logic for `process-details.sh` could be much better. Keep an eye on it and if it gets out of hand kill any/all related processes with something like:
+
+```
+ps aux | grep '/Users/${USER}/Desktop/perf' | awk '{print $2}' | xargs kill
 ```
 
 # Directory Checker
