@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# WARNING
+##########################
+#
+# in it's current from this can spawn too many processes ... the logic needs a rethink
+#
+
 filepath=/Users/$USER/Desktop/perf/logs/load   # modify as desired
 scriptpath=/Users/$USER/Desktop/perf/scripts
 process_logs=/Users/$USER/Desktop/perf/logs/process
