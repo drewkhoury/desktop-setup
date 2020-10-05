@@ -50,6 +50,17 @@ curl -o "Atom One Light.itermcolors" https://raw.githubusercontent.com/nathanbuc
 
 Then, in iTerm2 Preferences, under **Profiles and Colors**, go to **Color Presets... > Import...**, find and open the **Atom One Dark.itermcolors** file.
 
+## zsh config (default shell on newer Macs)
+
+Create a `~/.zshrc` file:
+
+```
+HISTSIZE=99999
+HISTFILESIZE=999999
+SAVEHIST=$HISTSIZE
+
+alias history="history 1"
+```
 
 # Mac config (manual)
 
