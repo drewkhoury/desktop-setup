@@ -36,6 +36,10 @@ brew cask install virtualbox
 # code
 brew cask install atom
 brew cask install visual-studio-code
+
+# extras
+brew cask install adobe-acrobat-reader 
+ 
 ```
 
 ## iTerm
