@@ -17,6 +17,7 @@ sudo apt-get install -y xfce4 virtualbox-guest-dkms virtualbox-guest-utils virtu
 
 # Optional: Use LightDM login screen (-> not required to run "startx")
 sudo apt-get install -y lightdm lightdm-gtk-greeter
+
 # Optional: Install a more feature-rich applications menu
 sudo apt-get install -y xfce4-whiskermenu-plugin
 

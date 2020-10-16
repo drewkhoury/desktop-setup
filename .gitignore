@@ -1,1 +1,3 @@
 .vagrant
+vagrant/log.txt
+*.log

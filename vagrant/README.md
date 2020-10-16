@@ -11,6 +11,8 @@ vagrant reload
 
 After the reboot, the VM screen should show the LightDM login screen. Log in as user "ubuntu", password "ubuntu".
 
+Then run `startx`? (or restart the VM and GYI should load automatically)
+
 Re-running the provisioners:
 
 ```
