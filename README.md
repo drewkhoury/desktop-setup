@@ -72,6 +72,13 @@ alias history="history 1"
 
 - Turn on: Vault & Firewall
 
+# Git
+
+```
+ssh-keygen
+git config --global --edit
+git commit --amend --reset-author
+```
 
 # Misc
 
