@@ -77,7 +77,6 @@ alias history="history 1"
 ```
 ssh-keygen
 git config --global --edit
-git commit --amend --reset-author
 ```
 
 # Misc
