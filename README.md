@@ -32,6 +32,7 @@ brew cask install iterm2
 # dev
 brew cask install docker
 brew cask install virtualbox
+brew cask install vagrant
 
 # code
 brew cask install atom
