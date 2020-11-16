@@ -86,9 +86,19 @@ This is an older repo but has useful tips: https://github.com/nicolashery/mac-de
 homebrew cheatsheet:
 
 ```
+# info
 brew list --cask
 brew outdated --cask
+brew info <package_name>
+
+# update system
+brew update
+brew upgrade
 brew upgrade --cask
+brew upgrade --cask --greedy
+
+# greedy == update casks that do not have versioning information (version :latest) 
+#           or applications that have a built-in upgrade mechanism (auto_updates true
 ```
 
 
