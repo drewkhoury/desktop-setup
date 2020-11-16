@@ -3,6 +3,7 @@ From: https://github.com/heidemn/vagrant-bionic-desktop
 # How to run it
 
 ```
+vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-disksize
 
 vagrant up 2>&1 | tee log.txt
@@ -22,3 +23,10 @@ vagrant provision 2>&1 | tee log.txt
 # When VM is powered off:
 vagrant up --provision 2>&1 | tee log.txt
 ```
+
+
+# Manual Instructions
+
+You may need to tick `Run command as a login shell` in terminal app preferences under profile/command ... to ensure that files like `~/.bash_profile` are run.
+
+If you update VirtualBox you may need to update guest additions on your VM `vagrant vbguest --do install`.
