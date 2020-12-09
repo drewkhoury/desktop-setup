@@ -41,6 +41,7 @@ brew cask install visual-studio-code
 # extras
 brew cask install adobe-acrobat-reader
 brew cask install nordvpn
+brew install --cask drawio
  
 ```
 
