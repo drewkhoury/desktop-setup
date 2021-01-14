@@ -17,6 +17,7 @@ brew cask install spectacle
 
 # a real browser
 brew cask install google-chrome
+brew install firefox
 
 # communication
 brew cask install slack
