@@ -43,6 +43,7 @@ brew cask install visual-studio-code
 brew cask install adobe-acrobat-reader
 brew cask install nordvpn
 brew install --cask drawio
+brew install --cask daisydisk
  
 ```
 
@@ -104,3 +105,15 @@ brew upgrade --cask --greedy
 ```
 
 
+# Reclaim some disk space!
+
+
+```
+sudo tmutil deletelocalsnapshots /
+sudo rm -rf /.DocumentRevisions-V100
+brew cleanup
+docker system prune -a
+
+# check for additional folders/mounts in `/Volumes` that shouldn't be there, such as `Shared Support` etc https://pc.net/helpcenter/answers/recover_mac_free_disk_space
+
+```
