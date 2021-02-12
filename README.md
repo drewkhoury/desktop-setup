@@ -44,7 +44,9 @@ brew cask install adobe-acrobat-reader
 brew cask install nordvpn
 brew install --cask drawio
 brew install --cask daisydisk
- 
+brew install --cask twitch
+
+# https://apps.apple.com/us/app/notability/id736189492?mt=12
 ```
 
 ## iTerm
