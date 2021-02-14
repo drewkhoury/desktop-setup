@@ -15,9 +15,10 @@ Install Sofware Packages:
 brew cask install menumeters
 brew cask install spectacle
 
-# a real browser
+# browsers
 brew cask install google-chrome
 brew install firefox
+brew install --cask brave-browser
 
 # communication
 brew cask install slack
