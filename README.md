@@ -30,6 +30,7 @@ brew cask install webex-meetings
 brew install wget
 brew install git
 brew cask install iterm2
+brew install htop
 
 # dev
 brew cask install docker
