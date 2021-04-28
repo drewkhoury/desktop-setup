@@ -1,4 +1,4 @@
-Tips for configuring a new Mac.
+Tips for configuring a new Mac. - test
 
 # Homebrew - Package Manager
 
