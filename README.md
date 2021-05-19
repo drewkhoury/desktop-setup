@@ -8,42 +8,49 @@ Install Homebrew:
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 
+then:
+
+```
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
 Install Sofware Packages:
 
 ```
 # desktop utilities
-brew cask install menumeters
-brew cask install spectacle
+brew install --cask menumeters
+brew install --cask spectacle
 
 # browsers
-brew cask install google-chrome
-brew install firefox
+brew install --cask google-chrome
+brew install --cask firefox
 brew install --cask brave-browser
 
 # communication
-brew cask install slack
-brew cask install microsoft-teams
-brew cask install zoomus
-brew cask install webex-meetings
+brew install --cask slack
+brew install --cask microsoft-teams
+brew install --cask zoom
+brew install --cask webex-meetings
 
 # essentials
 brew install wget
 brew install git
-brew cask install iterm2
+brew install --cask iterm2
 brew install htop
 
 # dev
-brew cask install docker
-brew cask install virtualbox
-brew cask install vagrant
+brew install --cask docker
+brew install --cask virtualbox
+brew install --cask vagrant
 
 # code
-brew cask install atom
-brew cask install visual-studio-code
+brew install --cask atom
+brew install --cask visual-studio-code
 
 # extras
-brew cask install adobe-acrobat-reader
-brew cask install nordvpn
+brew install --cask adobe-acrobat-reader
+brew install --cask nordvpn
 brew install --cask drawio
 brew install --cask daisydisk
 brew install --cask twitch
