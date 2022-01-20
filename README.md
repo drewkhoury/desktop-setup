@@ -18,9 +18,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 Install Sofware Packages:
 
 ```
-# desktop utilities
+# desktop utilities # note: https://rectangleapp.com/ is the community replacement for spectacle
 brew install --cask menumeters
-brew install --cask spectacle
+#brew install --cask spectacle
+brew install --cask rectangle
 
 # browsers
 brew install --cask google-chrome
