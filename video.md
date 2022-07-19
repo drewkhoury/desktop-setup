@@ -16,3 +16,7 @@
 - High Quality, Low Bandwidth: Thanks to the H.264 compression encoding
 - Video Resolution: 1920x1080, 1280x720, 640x480
 - Frame rate: 1080p@30FPS
+
+
+OBS Profile info:
+- Base/Output resolution: 5120x1600 16:5 @ 60 FPS
