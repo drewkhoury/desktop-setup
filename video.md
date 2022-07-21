@@ -20,3 +20,7 @@
 
 OBS Profile info:
 - Base/Output resolution: 5120x1600 16:5 @ 60 FPS
+
+Mac resolution: 1680 x 1050
+Mac camera: 1280 x 720
+Mac resolution, plus camera on side: 2960x1050
