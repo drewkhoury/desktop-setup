@@ -131,3 +131,11 @@ docker system prune -a
 # check for additional folders/mounts in `/Volumes` that shouldn't be there, such as `Shared Support` etc https://pc.net/helpcenter/answers/recover_mac_free_disk_space
 
 ```
+
+# XCODE
+
+Install via App Store, or...
+
+```
+xcode-select --install
+```
