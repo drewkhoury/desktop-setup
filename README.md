@@ -138,4 +138,5 @@ Install via App Store, or...
 
 ```
 xcode-select --install
+xcode-select -p
 ```
