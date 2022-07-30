@@ -134,9 +134,19 @@ docker system prune -a
 
 # XCODE
 
-Install via App Store, or...
+Should be installed when you install bdrew, or Install via App Store, or...
 
 ```
 xcode-select --install
 xcode-select -p
+```
+
+# Android Developmenet
+
+```
+# install flutter
+brew install --cask flutter
+
+# remember to manually add flutter plugin once installed
+brew install --cask android-studio
 ```
