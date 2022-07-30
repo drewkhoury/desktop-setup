@@ -149,6 +149,7 @@ brew install --cask flutter
 
 # remember to manually add flutter plugin once installed
 brew install --cask android-studio
+brew install --cask android-sdk
 
 # for things like gradle builds (which are tied to your workstations' version of flutter)
 brew install java
