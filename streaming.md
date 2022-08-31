@@ -62,3 +62,16 @@ OBS mic filters to consider:
 
 [Audacity](https://www.audacityteam.org/)
 
+## LinkedIn
+
+[Apply for LinkedIn Live Access](https://www.linkedin.com/help/linkedin/answer/a554240)
+
+[Go Live Using a Custom Stream (RTMP)](https://www.linkedin.com/help/linkedin/answer/a564446)
+- ie go to [https://www.linkedin.com/video/golive/now/](https://www.linkedin.com/video/golive/now/)
+- pick a region
+- grab the url and key to pop into OBS streaming preferences or zoom
+
+for Zoom:
+- https://zoom.us/profile > settings > meeting > advanced > Allow livestreaming of meetings
+- https://zoom.us/profile > schedule meeting > save > live streaming > configure
+- click  ...More in the host control > Live on Custom Live Stream Service.
