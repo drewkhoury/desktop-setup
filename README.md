@@ -61,6 +61,22 @@ brew install --cask postman
 # https://apps.apple.com/us/app/notability/id736189492?mt=12
 ```
 
+If you want to migrate away from a docker desktop install:
+
+```
+# if you have docker-desktop cask installed
+brew uninstall docker
+
+# to install the CLI
+brew install docker 
+
+# additionals
+brew install docker-buildx docker-compose docker-credential-helper
+
+brew install colima
+```
+
+
 ## iTerm
 
 If you're using iTerm consider adding the following color themes. Download the iTerm presets for the theme by running:
