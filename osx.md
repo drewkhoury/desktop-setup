@@ -47,6 +47,7 @@ brew install tree
 brew install bash-completion
 brew install --cask iterm2
 brew install htop
+brew install watch
 
 # development
 brew install --cask postman
