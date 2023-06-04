@@ -57,6 +57,44 @@ brew install awscli
 
 Note: For newer Macs that use `Apple Silicon` (M1/M2), Rosetta 2 enables a Mac with Apple silicon to use apps built for a Mac with an Intel processor https://support.apple.com/en-us/HT211861 - this is needed for software such as `aws-vpn-client`.
 
+## Docker
+
+Having docker or equivenet will allow you to avoid installing packages like node and python directly on your workstation, and help you develop in a way that can be reused with build systems and other developers. The code snippet below uses `docker` and `colima`:
+
+```
+# these are required to support docker
+# without docker-desktop
+brew install docker-buildx docker-compose docker-credential-helper
+brew install colima
+
+# this will install docker,
+# and docker-desktop
+brew install --cask docker
+
+# this is needed to remove docker desktop,
+# but keep docker
+brew uninstall docker
+brew install docker
+
+# (optional) install this if you also want k8s
+brew install kubectl
+```
+
+### Colima tips
+
+You should just be able to run `colima start` and your `docker` commands should work like they usually do. You can also run `colima kubernetes start` for k8s.
+
+Start with custom params: `colima start --cpu 4 --memory 8 --disk 100`
+
+For Intel compatibility (not sure on use case yet): `colima start --arch aarch64 --vm-type=vz --vz-rosetta`
+
+Cleanup/reset everything:
+
+```
+docker system prune -a
+colima delete
+```
+
 ## Other tools
 These tools are less common. Unless you know you'll need them, you can skip this section:
 
