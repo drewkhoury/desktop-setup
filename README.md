@@ -48,6 +48,7 @@ brew install --cask vagrant
 # code
 brew install --cask atom
 brew install --cask visual-studio-code
+# brew install --cask intellij-idea
 
 # extras
 brew install --cask adobe-acrobat-reader
